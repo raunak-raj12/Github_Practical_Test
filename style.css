@@ -1,0 +1,262 @@
+/* ---------- Basic reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 40px;
+  background: linear-gradient(135deg, #e0f2fe, #f4f6fb);
+}
+
+.hello {
+  font-size: 18px;
+  color: #475569;
+}
+
+.hero h1 {
+  font-size: 52px;
+  color: #1e293b;
+}
+
+.hero h2 {
+  font-size: 24px;
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  max-width: 550px;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid #2563eb;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #2563eb;
+}
+
+.btn-outline:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.theme-btn {
+  margin-top: 25px;
+  padding: 8px 18px;
+  border: 1px solid #1e293b;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 70px 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.alt {
+  max-width: 100%;
+  background-color: #e8eef9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.about-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.about-box p {
+  margin-bottom: 12px;
+}
+
+.details {
+  list-style: none;
+  margin-top: 10px;
+}
+
+/* ---------- Cards (skills and projects) ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+/* ---------- Contact ---------- */
+.contact-text {
+  margin-bottom: 10px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ---------- Dark mode (toggled by script.js) ---------- */
+body.dark {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+body.dark .hero h1,
+body.dark .section-title,
+body.dark .hello {
+  color: #f1f5f9;
+}
+
+body.dark .alt {
+  background-color: #1e293b;
+}
+
+body.dark .card,
+body.dark .about-box {
+  background-color: #334155;
+}
+
+body.dark .theme-btn {
+  background: #334155;
+  color: white;
+  border-color: #94a3b8;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+}
